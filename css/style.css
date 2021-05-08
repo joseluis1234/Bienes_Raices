@@ -30,15 +30,41 @@ h1, h2, h3, h4{
     font-weight: 300;
     margin: 1rem 0;
 }
+
 h1{
     font-size: 2.4rem;
 }
+
+h2{
+    font-size: 2.2rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
 p{
     line-height: 2rem;
     font-size: 1.2rem;
     font-weight: 300;
 }
 
+.boton{
+    background-color: var(--primario);
+    display: block;
+    padding: var(--padding);
+    text-align: center;
+    color: var(--claro);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--primario);
+}
+.boton:hover{
+    background-color: var(--claro);
+    color: var(--primario);
+
+    transition: all .5s ease-in-out;
+}
 /*Header*/
 .header{
     margin-top: 2rem;
@@ -97,4 +123,56 @@ p{
 .contenido-nosotros{
     display: grid;
     align-content: center;
+}
+
+/*Venta*/
+.venta{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.venta img{
+    width: 100%;
+}
+
+.destacado{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+@media screen and (min-width:768px) {
+    .venta{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,auto);
+    }
+}
+
+.card{
+    border: 1px solid rgb(182, 181, 181);
+    background-color: var(--claro);
+    padding: var(--padding);
+}
+
+.card p{
+    font-size: .9rem;
+    line-height: 1.8rem;
+}
+
+.anuncio{
+    display: grid;
+}
+
+.anuncio .precio{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.precio span{
+    font-weight: 300;
+    color: var(--primario);
 }
